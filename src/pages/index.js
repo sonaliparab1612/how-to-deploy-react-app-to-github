@@ -63,12 +63,6 @@ export const pageQuery = graphql`
           frontmatter {
             title
             description
-             avatar: file(absolutePath: { regex: "/gh-pages-installation.png/" }) {
-        childImageSharp {
-          fixed(width: 500, height: 500) {
-            ...GatsbyImageSharpFixed
-          }
-        }
           }
         }
       }
