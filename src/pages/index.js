@@ -24,9 +24,9 @@ const BlogIndex = ({ data, location }) => {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                {/* <Link style={{ boxShadow: `none` }} to={node.fields.slug}> */}
                   {title}
-                </Link>
+                {/* </Link> */}
               </h3>
             </header>
             <section>
@@ -35,7 +35,6 @@ const BlogIndex = ({ data, location }) => {
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
-              <img src={node.frontmatter.imgage}/>
             </section>
           </article>
         )
