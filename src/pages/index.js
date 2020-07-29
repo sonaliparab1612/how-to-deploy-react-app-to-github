@@ -28,7 +28,6 @@ const BlogIndex = ({ data, location }) => {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
             </header>
             <section>
               <p
@@ -36,6 +35,7 @@ const BlogIndex = ({ data, location }) => {
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
+              <img src={node.frontmatter.imgage}/>
             </section>
           </article>
         )
@@ -61,9 +61,14 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
             description
+             avatar: file(absolutePath: { regex: "/gh-pages-installation.png/" }) {
+        childImageSharp {
+          fixed(width: 500, height: 500) {
+            ...GatsbyImageSharpFixed
+          }
+        }
           }
         }
       }
