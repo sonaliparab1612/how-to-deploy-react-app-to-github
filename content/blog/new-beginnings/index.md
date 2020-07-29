@@ -7,6 +7,5 @@ description: "After creating react app if you want to deploy it on github here a
   Step 2:
   Install github on your machine.
   step 3:
-  we need to install gh-pages"
----
-  ![gh-pages-installation](./gh-pages-installation.jpg)
+  we need to install gh-pages
+  ![gh-pages-installation](./gh-pages-installation.jpg)"
